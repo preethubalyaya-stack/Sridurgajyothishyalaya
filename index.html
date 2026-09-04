@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sri Durga Jyothishyalaya</title>
 
   <style>
@@ -20,7 +21,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, #7b160b, #d88900);
+      background: linear-gradient(135deg, #651008, #d88900);
       color: white;
       text-align: center;
       padding: 35px 15px;
@@ -35,16 +36,31 @@
       font-size: 17px;
     }
 
+    .language {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+
+    .language button {
+      border: none;
+      padding: 8px 12px;
+      margin: 2px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     nav {
       background: #4d0d08;
       text-align: center;
-      padding: 12px;
+      padding: 13px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 12px;
+      margin: 0 10px;
       font-weight: bold;
     }
 
@@ -56,12 +72,12 @@
 
     .hero h2 {
       color: #8b1a0e;
-      font-size: 28px;
+      font-size: 30px;
       margin-bottom: 15px;
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
       font-size: 18px;
     }
@@ -78,15 +94,16 @@
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
+      padding: 45px 20px;
+      max-width: 1050px;
       margin: auto;
     }
 
     section h2 {
       text-align: center;
       color: #8b1a0e;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      font-size: 28px;
     }
 
     .cards {
@@ -98,26 +115,86 @@
     .card {
       background: white;
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 14px;
       text-align: center;
-      box-shadow: 0 3px 12px #ddd;
+      box-shadow: 0 4px 15px #ddd;
     }
 
     .card h3 {
       color: #b35b00;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #8b1a0e;
+      font-size: 18px;
+    }
+
+    .about-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px #ddd;
+      text-align: center;
+    }
+
+    .profile {
+      width: 230px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #d88900;
+      display: block;
+      margin: 0 auto 25px;
+    }
+
+    .building {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 15px;
+      display: block;
+      margin: 25px auto;
+      box-shadow: 0 4px 15px #ccc;
     }
 
     .contact {
       background: #fff0d2;
       text-align: center;
+      max-width: none;
+    }
+
+    .contact p {
+      margin: 8px;
+      font-size: 18px;
+    }
+
+    .phone {
+      color: #8b1a0e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .whatsapp {
+      background: #168a39;
+      margin: 10px;
+    }
+
+    .map {
+      background: #8b1a0e;
+      margin: 10px;
     }
 
     footer {
       background: #4d0d08;
       color: white;
       text-align: center;
-      padding: 20px;
+      padding: 22px;
+    }
+
+    .english {
+      display: none;
     }
 
     @media (max-width: 600px) {
@@ -129,87 +206,335 @@
         display: inline-block;
         margin: 5px;
       }
+
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      .language {
+        position: static;
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🕉️ Sri Durga Jyothishyalaya</h1>
-    <p>ಜ್ಯೋತಿಷ್ಯ • ವಾಸ್ತು • ಪಂಚಾಂಗ • ಜಾತಕ ವಿಶ್ಲೇಷಣೆ</p>
-  </header>
+<header>
 
-  <nav>
-    <a href="#home">ಮುಖಪುಟ</a>
-    <a href="#services">ಸೇವೆಗಳು</a>
-    <a href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a>
-    <a href="#contact">ಸಂಪರ್ಕ</a>
-  </nav>
-
-  <div class="hero" id="home">
-    <h2>ನಿಮ್ಮ ಜೀವನದ ಮಾರ್ಗದರ್ಶನಕ್ಕಾಗಿ</h2>
-    <p>
-      ಶ್ರೀ ದುರ್ಗಾ ಜ್ಯೋತಿಷ್ಯಾಲಯಕ್ಕೆ ಸ್ವಾಗತ.
-      ಜಾತಕ, ವಿವಾಹ, ವೃತ್ತಿ, ಕುಟುಂಬ ಹಾಗೂ ಜೀವನದ ವಿವಿಧ ವಿಷಯಗಳ
-      ಕುರಿತು ಜ್ಯೋತಿಷ್ಯ ಸಲಹೆ ಪಡೆಯಿರಿ.
-    </p>
-
-    <a class="button" href="#contact">ಸಂಪರ್ಕಿಸಿ</a>
+  <div class="language">
+    <button onclick="showKannada()">ಕನ್ನಡ</button>
+    <button onclick="showEnglish()">English</button>
   </div>
 
-  <section id="services">
-    <h2>ನಮ್ಮ ಸೇವೆಗಳು</h2>
+  <h1>🕉️ Sri Durga Jyothishyalaya</h1>
 
-    <div class="cards">
+  <p class="kannada">
+    ಜ್ಯೋತಿಷ್ಯ • ವಾಸ್ತು • ಪಂಚಾಂಗ • ಜಾತಕ ವಿಶ್ಲೇಷಣೆ
+  </p>
 
-      <div class="card">
-        <h3>🔮 ಜಾತಕ ವಿಶ್ಲೇಷಣೆ</h3>
-        <p>ಜನ್ಮ ಜಾತಕದ ಆಧಾರದ ಮೇಲೆ ವಿವರವಾದ ಮಾರ್ಗದರ್ಶನ.</p>
-      </div>
+  <p class="english">
+    Astrology • Vastu • Panchanga • Horoscope Analysis
+  </p>
 
-      <div class="card">
-        <h3>💍 ವಿವಾಹ ಜ್ಯೋತಿಷ್ಯ</h3>
-        <p>ವಿವಾಹ ಹೊಂದಾಣಿಕೆ ಮತ್ತು ಜಾತಕ ಪರಿಶೀಲನೆ.</p>
-      </div>
+</header>
 
-      <div class="card">
-        <h3>🏠 ವಾಸ್ತು ಸಲಹೆ</h3>
-        <p>ಮನೆ ಮತ್ತು ವ್ಯವಹಾರ ಸ್ಥಳಗಳಿಗೆ ವಾಸ್ತು ಸಲಹೆ.</p>
-      </div>
+<nav>
 
-      <div class="card">
-        <h3>💼 ವೃತ್ತಿ ಸಲಹೆ</h3>
-        <p>ವೃತ್ತಿ ಮತ್ತು ಉದ್ಯೋಗಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಜ್ಯೋತಿಷ್ಯ ಮಾರ್ಗದರ್ಶನ.</p>
-      </div>
+  <span class="kannada">
+    <a href="#home">ಮುಖಪುಟ</a>
+    <a href="#services">ಸೇವೆಗಳು</a>
+    <a href="#rates">ದರಗಳು</a>
+    <a href="#about">ನಮ್ಮ ಬಗ್ಗೆ</a>
+    <a href="#contact">ಸಂಪರ್ಕ</a>
+  </span>
 
+  <span class="english">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#rates">Rates</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </span>
+
+</nav>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+
+  <h2 class="kannada">
+    ನಿಮ್ಮ ಜೀವನದ ಪ್ರಮುಖ ವಿಷಯಗಳ ಕುರಿತು ಜ್ಯೋತಿಷ್ಯ ಸಲಹೆ
+  </h2>
+
+  <h2 class="english">
+    Astrology Consultation for Important Areas of Life
+  </h2>
+
+  <p class="kannada">
+    ಶ್ರೀ ದುರ್ಗಾ ಜ್ಯೋತಿಷ್ಯಾಲಯಕ್ಕೆ ಸ್ವಾಗತ.
+    ಜಾತಕ, ವಿವಾಹ, ವೃತ್ತಿ, ವಾಸ್ತು ಹಾಗೂ ಜೀವನದ ವಿವಿಧ ವಿಷಯಗಳ
+    ಕುರಿತು ಜ್ಯೋತಿಷ್ಯ ಸಲಹೆ ಪಡೆಯಿರಿ.
+  </p>
+
+  <p class="english">
+    Welcome to Sri Durga Jyothishyalaya.
+    Consult us for horoscope analysis, marriage astrology,
+    career astrology, Vastu and other astrology-related services.
+  </p>
+
+  <a class="button kannada" href="#contact">
+    ಸಂಪರ್ಕಿಸಿ
+  </a>
+
+  <a class="button english" href="#contact">
+    Contact Us
+  </a>
+
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <h2 class="kannada">ನಮ್ಮ ಸೇವೆಗಳು</h2>
+  <h2 class="english">Our Services</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🔮 <span class="kannada">ಜಾತಕ ವಿಶ್ಲೇಷಣೆ</span>
+      <span class="english">Horoscope Analysis</span></h3>
+
+      <p class="kannada">
+        ಜನ್ಮ ಜಾತಕದ ಆಧಾರದ ಮೇಲೆ ವಿವರವಾದ ಜ್ಯೋತಿಷ್ಯ ಸಲಹೆ.
+      </p>
+
+      <p class="english">
+        Detailed astrology consultation based on your birth horoscope.
+      </p>
+
+      <div class="price">₹1,500 / $25</div>
     </div>
-  </section>
 
-  <section id="about">
-    <h2>ನಮ್ಮ ಬಗ್ಗೆ</h2>
-    <p style="text-align:center;">
-      Sri Durga Jyothishyalaya ನಲ್ಲಿ ಜ್ಯೋತಿಷ್ಯ ಸಂಬಂಧಿತ
-      ಸಲಹೆ ಮತ್ತು ಮಾರ್ಗದರ್ಶನವನ್ನು ನೀಡಲಾಗುತ್ತದೆ.
+
+    <div class="card">
+      <h3>💍 <span class="kannada">ವಿವಾಹ ಜ್ಯೋತಿಷ್ಯ</span>
+      <span class="english">Marriage Astrology</span></h3>
+
+      <p class="kannada">
+        ವಿವಾಹ ಹೊಂದಾಣಿಕೆ ಮತ್ತು ಜಾತಕ ಪರಿಶೀಲನೆ.
+      </p>
+
+      <p class="english">
+        Marriage compatibility and horoscope matching consultation.
+      </p>
+
+      <div class="price">₹1,000 / $20</div>
+    </div>
+
+
+    <div class="card">
+      <h3>🏠 <span class="kannada">ವಾಸ್ತು ಸಲಹೆ</span>
+      <span class="english">Vastu Consultation</span></h3>
+
+      <p class="kannada">
+        ಮನೆ ಮತ್ತು ವ್ಯವಹಾರ ಸ್ಥಳಗಳಿಗೆ ವಾಸ್ತು ಸಲಹೆ.
+      </p>
+
+      <p class="english">
+        Vastu consultation for homes and business premises.
+      </p>
+
+      <div class="price">₹2,500 / $40</div>
+    </div>
+
+
+    <div class="card">
+      <h3>💼 <span class="kannada">ವೃತ್ತಿ ಸಲಹೆ</span>
+      <span class="english">Career Astrology</span></h3>
+
+      <p class="kannada">
+        ವೃತ್ತಿ ಮತ್ತು ಉದ್ಯೋಗಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಜ್ಯೋತಿಷ್ಯ ಸಲಹೆ.
+      </p>
+
+      <p class="english">
+        Astrology consultation related to career and employment.
+      </p>
+
+      <div class="price">₹1,500 / $25</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- RATES -->
+
+<section id="rates">
+
+  <h2 class="kannada">ಸೇವೆಗಳ ದರಗಳು</h2>
+  <h2 class="english">Service Rates</h2>
+
+  <div class="about-box">
+
+    <p class="kannada">
+      🇮🇳 ಭಾರತ — ₹ &nbsp;&nbsp; | &nbsp;&nbsp; 🌍 International — $
     </p>
-  </section>
 
-  <section class="contact" id="contact">
-    <h2>ಸಂಪರ್ಕಿಸಿ</h2>
+    <p class="english">
+      🇮🇳 India — ₹ &nbsp;&nbsp; | &nbsp;&nbsp; 🌍 International — USD $
+    </p>
 
-    <p>📞 Phone: ನಿಮ್ಮ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ಇಲ್ಲಿ ಹಾಕಿ</p>
-    <p>📍 Location: ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಇಲ್ಲಿ ಹಾಕಿ</p>
+    <br>
 
-    <a class="button"
-       href="https://wa.me/919481957909"
-       target="_blank">
-       WhatsApp ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ
+    <p>🔮 Horoscope Analysis — ₹1,500 / $25</p>
+    <p>💍 Marriage Astrology — ₹1,000 / $20</p>
+    <p>🏠 Vastu Consultation — ₹2,500 / $40</p>
+    <p>💼 Career Astrology — ₹1,500 / $25</p>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <h2 class="kannada">ನಮ್ಮ ಬಗ್ಗೆ</h2>
+  <h2 class="english">About Us</h2>
+
+  <div class="about-box">
+
+    <!-- Upload your photo to GitHub as profile.jpg -->
+    <img src="profile.jpg"
+         alt="Sri Durga Jyothishyalaya"
+         class="profile">
+
+    <p class="kannada">
+      ಶ್ರೀ ದುರ್ಗಾ ಜ್ಯೋತಿಷ್ಯಾಲಯದಲ್ಲಿ ಜ್ಯೋತಿಷ್ಯ,
+      ಜಾತಕ, ವಿವಾಹ, ವಾಸ್ತು ಮತ್ತು ವೃತ್ತಿಗೆ ಸಂಬಂಧಿಸಿದ
+      ಸಲಹೆಗಳನ್ನು ನೀಡಲಾಗುತ್ತದೆ.
+    </p>
+
+    <p class="english">
+      Sri Durga Jyothishyalaya provides astrology consultations
+      related to horoscopes, marriage, Vastu and career.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- BUILDING -->
+
+<section>
+
+  <h2 class="kannada">ನಮ್ಮ ಸ್ಥಳ</h2>
+  <h2 class="english">Our Location</h2>
+
+  <!-- Upload your building photo to GitHub as building.jpg -->
+  <img src="building.jpg"
+       alt="Sri Durga Jyothishyalaya Building"
+       class="building">
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <h2 class="kannada">ಸಂಪರ್ಕಿಸಿ</h2>
+  <h2 class="english">Contact Us</h2>
+
+  <p>
+    📞
+    <a class="phone" href="tel:+919481957909">
+      9481957909
     </a>
-  </section>
+  </p>
 
-  <footer>
-    <p>© 2026 Sri Durga Jyothishyalaya</p>
-  </footer>
+  <p>
+    📞
+    <a class="phone" href="tel:+918105720362">
+      8105720362
+    </a>
+  </p>
+
+  <p class="kannada">
+    📍 Salethur, Karnataka
+  </p>
+
+  <p class="english">
+    📍 Salethur, Karnataka, India
+  </p>
+
+  <br>
+
+  <a class="button whatsapp"
+     href="https://wa.me/919481957909"
+     target="_blank">
+     💬 WhatsApp
+  </a>
+
+  <a class="button whatsapp"
+     href="https://wa.me/918105720362"
+     target="_blank">
+     💬 WhatsApp 2
+  </a>
+
+  <br>
+
+  <a class="button map"
+     href="https://maps.app.goo.gl/tTLu3uvup9raPzBy7"
+     target="_blank">
+     📍 Google Maps
+  </a>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 Sri Durga Jyothishyalaya
+  </p>
+
+  <p class="kannada">
+    ಜ್ಯೋತಿಷ್ಯ • ವಾಸ್ತು • ಜಾತಕ ವಿಶ್ಲೇಷಣೆ
+  </p>
+
+  <p class="english">
+    Astrology • Vastu • Horoscope Analysis
+  </p>
+
+</footer>
+
+<script>
+
+function showKannada() {
+  document.querySelectorAll(".kannada").forEach(function(el) {
+    el.style.display = "";
+  });
+
+  document.querySelectorAll(".english").forEach(function(el) {
+    el.style.display = "none";
+  });
+}
+
+function showEnglish() {
+  document.querySelectorAll(".kannada").forEach(function(el) {
+    el.style.display = "none";
+  });
+
+  document.querySelectorAll(".english").forEach(function(el) {
+    el.style.display = "";
+  });
+}
+
+showKannada();
+
+</script>
 
 </body>
 </html>
