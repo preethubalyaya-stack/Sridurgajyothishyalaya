@@ -1,907 +1,758 @@
 <!DOCTYPE html>
-<html lang="kn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Sri Durga Jyothishyalaya - Horoscope, Jathaka Koota, Marriage Matching, Vastu and Online Consultation in India and Worldwide.">
+<title>Sri Durga Jyothishyalaya | Horoscope & Marriage Matching</title>
 
-<title>Sri Durga Jyothishyalaya | India & Worldwide</title>
+<meta name="description"
+content="Sri Durga Jyothishyalaya offers Horoscope Preparation, Jathaka Koota, Marriage Match Making, Vastu and Online Consultation in India and USA.">
 
 <style>
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#080d19;
-color:#f5f1e8;
-line-height:1.7;
-}
-
-a{
-text-decoration:none;
-color:inherit;
+    font-family:Georgia, "Times New Roman", serif;
+    background:#fffaf2;
+    color:#3b2115;
+    line-height:1.6;
 }
 
 header{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:30px 18px;
-position:relative;
-overflow:hidden;
-background:radial-gradient(circle at 50% 0%,#3a455f 0%,#151d30 35%,#080d19 75%);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#4b160f;
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
 }
 
-header:before{
-content:"ॐ";
-position:absolute;
-font-size:300px;
-color:#d9a441;
-opacity:.035;
-top:8%;
-left:50%;
-transform:translateX(-50%);
-}
-
-.top{
-position:absolute;
-top:22px;
-left:0;
-right:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 6%;
-z-index:5;
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
 }
 
 .logo{
-font-family:Georgia,serif;
-font-size:17px;
-letter-spacing:2px;
-color:#e9b85e;
-text-shadow:1px 1px 0 #8b5a16,2px 2px 0 #5b3508,3px 3px 5px #000;
+    color:#f8d77b;
+    font-size:22px;
+    font-weight:bold;
 }
 
-.lang button{
-background:transparent;
-border:1px solid #d28a45;
-color:white;
-border-radius:22px;
-padding:8px 14px;
-margin-left:5px;
-cursor:pointer;
+nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#f8d77b;
+}
+
+.lang-btn{
+    border:1px solid #f8d77b;
+    background:transparent;
+    color:#f8d77b;
+    padding:7px 12px;
+    border-radius:20px;
+    cursor:pointer;
 }
 
 .hero{
-max-width:950px;
-position:relative;
-z-index:2;
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+    background:
+        linear-gradient(rgba(57,15,10,.78),rgba(57,15,10,.82)),
+        radial-gradient(circle at center,#a65d22,#3b110c);
+    color:white;
 }
 
-.eyebrow{
-color:#d4874e;
-letter-spacing:4px;
-text-transform:uppercase;
-font-size:13px;
-margin-bottom:15px;
+.hero-content{
+    max-width:850px;
 }
 
-.main-title{
-font-family:Georgia,serif;
-font-size:clamp(43px,8vw,88px);
-font-weight:bold;
-line-height:1.08;
-letter-spacing:2px;
-margin:15px 0 22px;
-color:#f7d37b;
-text-shadow:1px 1px 0 #bd8427,2px 2px 0 #9b6719,3px 3px 0 #78480d,4px 4px 0 #5b3208,5px 5px 8px #000,0 0 20px #d69a3d55;
+.om{
+    font-size:55px;
+    color:#f8d77b;
+    margin-bottom:10px;
+}
+
+.hero h1{
+    font-size:48px;
+    color:#f8d77b;
+    margin-bottom:12px;
+}
+
+.hero h2{
+    font-size:25px;
+    margin-bottom:18px;
 }
 
 .hero p{
-font-size:19px;
-color:#dedbd5;
-max-width:780px;
-margin:auto;
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-margin-top:28px;
-background:#c86d37;
-color:white;
-padding:14px 26px;
-border-radius:9px;
-font-weight:bold;
-border:none;
-cursor:pointer;
-box-shadow:0 10px 25px #0007;
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
-nav{
-position:sticky;
-top:0;
-z-index:20;
-background:#070c18ee;
-backdrop-filter:blur(10px);
-padding:16px;
-text-align:center;
-border-bottom:1px solid #273047;
+.btn-primary{
+    background:#f8d77b;
+    color:#4b160f;
 }
 
-nav a{
-color:#eee;
-margin:0 10px;
-font-size:13px;
-letter-spacing:1.5px;
+.btn-secondary{
+    border:1px solid #f8d77b;
+    color:#f8d77b;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
 }
 
 section{
-padding:75px 6%;
-max-width:1200px;
-margin:auto;
+    padding:75px 20px;
 }
 
-.gold{
-color:#d4874e;
-letter-spacing:4px;
-text-transform:uppercase;
-font-size:13px;
+.container{
+    max-width:1150px;
+    margin:auto;
 }
 
-h2{
-font-family:Georgia,serif;
-font-size:clamp(32px,6vw,55px);
-line-height:1.15;
-margin-bottom:18px;
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.intro{
-text-align:center;
-max-width:850px;
-margin:auto;
-color:#c9c8c4;
-font-size:18px;
+.section-title h2{
+    color:#6d2015;
+    font-size:34px;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:22px;
-margin-top:40px;
+.section-title p{
+    color:#795548;
+    margin-top:8px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
 
 .card{
-background:#111a2d;
-border:1px solid #273149;
-border-radius:22px;
-padding:28px;
-text-align:center;
-transition:.25s;
+    background:white;
+    padding:30px 22px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(80,40,10,.12);
+    border:1px solid #efd7a2;
+    transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
-border-color:#c8753b;
+    transform:translateY(-7px);
+    box-shadow:0 10px 25px rgba(80,40,10,.2);
 }
 
 .icon{
-font-size:38px;
-margin-bottom:10px;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
 .card h3{
-font-family:Georgia,serif;
-font-size:24px;
-margin-bottom:10px;
+    color:#6d2015;
+    margin-bottom:10px;
 }
 
 .card p{
-color:#c6c6c4;
-}
-
-.viewbtn{
-display:inline-block;
-margin-top:17px;
-background:transparent;
-border:1px solid #c8753b;
-color:#f5f1e8;
-padding:9px 16px;
-border-radius:7px;
-cursor:pointer;
-}
-
-.details{
-display:none;
-margin-top:14px;
-padding-top:12px;
-border-top:1px solid #39445b;
-color:#e4b05b;
-font-weight:bold;
-}
-
-.about{
-background:#151d30;
-max-width:none;
-}
-
-.about-inner{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.about-photo img{
-width:100%;
-max-width:430px;
-height:430px;
-object-fit:cover;
-display:block;
-margin:auto;
-border-radius:22px;
-border:3px solid #c8753b;
-box-shadow:0 15px 35px #0007;
-}
-
-.photo-name{
-text-align:center;
-margin-top:12px;
-color:#e2ad59;
-font-family:Georgia,serif;
-font-size:22px;
-text-shadow:1px 1px 0 #70450d,2px 2px 3px #000;
-}
-
-.about-text p{
-color:#ccc;
-margin:12px 0;
-}
-
-.match{
-background:#0d1526;
-max-width:none;
-}
-
-.match-inner{
-max-width:1100px;
-margin:auto;
-}
-
-.matchbox{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-margin-top:35px;
-}
-
-.personbox{
-background:#151d30;
-border:1px solid #303b55;
-border-radius:18px;
-padding:25px;
-}
-
-.personbox h3{
-font-family:Georgia,serif;
-color:#d9a052;
-font-size:25px;
-margin-bottom:18px;
-text-align:center;
-}
-
-.field{
-margin-bottom:14px;
-}
-
-.field label{
-display:block;
-margin-bottom:5px;
-color:#ddd;
-}
-
-.field input{
-width:100%;
-padding:12px;
-border-radius:7px;
-border:1px solid #44506a;
-background:#0b1222;
-color:white;
-font-size:15px;
-}
-
-.field input:focus{
-outline:none;
-border-color:#d28a45;
-}
-
-.match-submit{
-text-align:center;
-margin-top:30px;
-}
-
-.matchnote{
-text-align:center;
-color:#aaa;
-margin-top:15px;
+    font-size:14px;
+    color:#654;
 }
 
 .rates{
-background:#111827;
-max-width:none;
+    background:#f5e6c8;
 }
 
-.rates-inner{
-max-width:1200px;
-margin:auto;
+.price-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
 
-.rategrid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:18px;
-margin-top:30px;
+.price-card{
+    background:white;
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
+    border:2px solid #e5c77a;
+    box-shadow:0 5px 18px rgba(80,40,10,.12);
 }
 
-.rate{
-background:#151d30;
-border:1px solid #303b55;
-border-radius:15px;
-padding:22px;
-text-align:center;
+.price-card h3{
+    color:#6d2015;
+    min-height:55px;
 }
 
-.rate strong{
-font-size:19px;
+.price{
+    font-size:28px;
+    font-weight:bold;
+    color:#a05b13;
+    margin:15px 0;
 }
 
-.rate span{
-display:none;
-color:#e3ae57;
-margin-top:8px;
-font-weight:bold;
+.consult{
+    background:#4b160f;
+    color:white;
 }
 
-.location{
-text-align:center;
+.consult .section-title h2,
+.consult .section-title p{
+    color:white;
 }
 
-.location img{
-width:100%;
-max-width:850px;
-height:400px;
-object-fit:cover;
-border-radius:22px;
-border:3px solid #c8753b;
-margin-top:30px;
-box-shadow:0 15px 35px #0007;
+.form-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:6px;
+    color:#4b160f;
+    font-weight:bold;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #d7bd8b;
+    border-radius:10px;
+    font-size:15px;
+    background:#fffdf8;
+    outline:none;
+}
+
+input:focus,select:focus,textarea:focus{
+    border-color:#a05b13;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:0;
+    background:#6d2015;
+    color:white;
+    padding:14px;
+    border-radius:30px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#4b160f;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-box{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(80,40,10,.1);
+}
+
+.about-box h3{
+    color:#6d2015;
+    margin-bottom:15px;
+}
+
+.highlight{
+    color:#a05b13;
+    font-weight:bold;
+}
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:white;
+    margin-bottom:12px;
+    padding:18px 20px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(80,40,10,.08);
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    color:#6d2015;
 }
 
 .contact{
-background:#d9b432;
-color:#101421;
-text-align:center;
-max-width:none;
+    background:#f5e6c8;
 }
 
-.contact h2{
-color:#101421;
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.contact p{
-font-size:19px;
-margin:8px;
+.contact-card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:16px;
 }
 
-.whatsapp{
-background:#168a39;
+.contact-card h3{
+    color:#6d2015;
+    margin-bottom:8px;
 }
 
-.maps{
-background:#8b1a0e;
+.contact-card a{
+    color:#a05b13;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 footer{
-padding:45px 20px;
-text-align:center;
-background:#070c18;
-color:#aaa;
+    background:#2b0d09;
+    color:#eee;
+    text-align:center;
+    padding:30px 20px;
 }
 
 footer strong{
-color:#f2ede4;
-font-family:Georgia,serif;
-font-size:22px;
-text-shadow:1px 1px 0 #75500e,2px 2px 3px #000;
+    color:#f8d77b;
 }
 
-.small{
-font-size:13px;
-margin-top:12px;
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+    z-index:2000;
 }
 
-@media(max-width:700px){
+@media(max-width:900px){
+    .services,
+    .price-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-.top{
-padding:0 15px;
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
 }
 
-.logo{
-font-size:11px;
-}
+@media(max-width:650px){
 
-nav{
-overflow-x:auto;
-white-space:nowrap;
-text-align:left;
-}
+    .navbar{
+        flex-direction:column;
+    }
 
-nav a{
-margin:0 7px;
-font-size:11px;
-}
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-.main-title{
-font-size:45px;
-}
+    .hero{
+        min-height:580px;
+    }
 
-.hero p{
-font-size:17px;
-}
+    .hero h1{
+        font-size:34px;
+    }
 
-.about-inner{
-grid-template-columns:1fr;
-}
+    .hero h2{
+        font-size:20px;
+    }
 
-.matchbox{
-grid-template-columns:1fr;
-}
+    .hero p{
+        font-size:16px;
+    }
 
-.location img{
-height:280px;
-}
+    .services,
+    .price-grid,
+    .about,
+    .contact-grid,
+    .form-row{
+        grid-template-columns:1fr;
+    }
 
+    section{
+        padding:55px 15px;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .form-box{
+        padding:22px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header id="home">
+<header>
+<div class="navbar">
 
-<div class="top">
+<div class="logo">Sri Durga Jyothishyalaya</div>
 
-<div class="logo">
-SRI DURGA JYOTHISHYALAYA
-</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#rates">Rates</a>
+<a href="#consultation">Consultation</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<div class="lang">
-<button onclick="showKannada()">ಕನ್ನಡ</button>
-<button onclick="showEnglish()">English</button>
-</div>
-
-</div>
-
-<div class="hero">
-
-<div class="eyebrow">
-Traditional Guidance • Modern Clarity
-</div>
-
-<h1 class="main-title" id="titleKn">
-ಶ್ರೀ ದುರ್ಗಾ ಜ್ಯೋತಿಷ್ಯಾಲಯ
-</h1>
-
-<h1 class="main-title" id="titleEn" style="display:none;">
-Sri Durga Jyothishyalaya
-</h1>
-
-<p id="subtitleKn">
-ಜಾತಕ • ವಿವಾಹ ಹೊಂದಾಣಿಕೆ • ವಾಸ್ತು • ಆನ್‌ಲೈನ್ ಸಲಹೆ
-</p>
-
-<p id="subtitleEn" style="display:none;">
-Horoscope • Marriage Matching • Vastu • Online Consultation
-</p>
-
-<a class="btn" href="#contact" id="contactKn">
-ಸಲಹೆಗಾಗಿ ಸಂಪರ್ಕಿಸಿ
-</a>
-
-<a class="btn" href="#contact" id="contactEn" style="display:none;">
-Book a Consultation
-</a>
+<button class="lang-btn" onclick="toggleLanguage()">ಕನ್ನಡ / English</button>
 
 </div>
 </header>
 
-<nav>
 
-<a href="#home">HOME</a>
-<a href="#services">SERVICES</a>
-<a href="#match">MATCH MAKING</a>
-<a href="#about">ABOUT</a>
-<a href="#rates">RATES</a>
-<a href="#location">LOCATION</a>
-<a href="#contact">CONTACT</a>
+<!-- HOME -->
+<section class="hero" id="home">
 
-</nav>
+<div class="hero-content">
 
+<div class="om">ॐ</div>
+
+<h1>Sri Durga Jyothishyalaya</h1>
+
+<h2>Horoscope • Jathaka Koota • Marriage Match Making</h2>
+
+<p>
+Traditional guidance for Horoscope Preparation, Jathaka Koota,
+Marriage Match Making and Vastu consultations.
+Serving clients in India and USA.
+</p>
+
+<div class="buttons">
+<a href="#consultation" class="btn btn-primary">
+Book Consultation
+</a>
+
+<a href="#services" class="btn btn-secondary">
+View Services
+</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- SERVICES -->
 <section id="services">
 
-<div class="gold" style="text-align:center;">
-Our Services
+<div class="container">
+
+<div class="section-title">
+<h2>Our Services</h2>
+<p>ನಮ್ಮ ಸೇವೆಗಳು</p>
 </div>
 
-<h2 style="text-align:center;">
-Guidance for Your Life's Journey
-</h2>
-
-<p class="intro">
-Personalized consultation for clients in India and worldwide.
-</p>
-
-<div class="cards">
+<div class="services">
 
 <div class="card">
-
 <div class="icon">📜</div>
-
-<h3>
-Horoscope Preparation
-</h3>
-
-<p>
-Horoscope preparation based on your birth details.
-</p>
-
-<button class="viewbtn" onclick="showDetails(this)">
-View Details
-</button>
-
-<div class="details">
-Horoscope Preparation – ₹1,100
+<h3>Horoscope Preparation</h3>
+<p>ಜಾತಕ ತಯಾರಿ</p>
+<p>Detailed horoscope preparation based on your birth details.</p>
 </div>
-
-</div>
-
 
 <div class="card">
+<div class="icon">🔯</div>
+<h3>Jathaka Koota</h3>
+<p>ಜಾತಕ ಕೂಟ</p>
+<p>Jathaka Koota preparation and horoscope information.</p>
+</div>
 
+<div class="card">
 <div class="icon">💍</div>
-
-<h3>
-Jathaka Koota
-</h3>
-
-<p>
-Marriage horoscope matching and compatibility consultation.
-</p>
-
-<button class="viewbtn" onclick="showDetails(this)">
-View Details
-</button>
-
-<div class="details">
-Jathaka Koota – ₹500
+<h3>Marriage Match Making</h3>
+<p>ವಿವಾಹ ಹೊಂದಾಣಿಕೆ / ಜಾತಕ ಹೊಂದಾಣಿಕೆ</p>
+<p>Marriage compatibility consultation using birth details.</p>
 </div>
-
-</div>
-
 
 <div class="card">
-
-<div class="icon">❤️</div>
-
-<h3>
-Marriage Match Making
-</h3>
-
-<p>
-Enter bride and groom birth details for matching.
-</p>
-
-<a class="viewbtn" href="#match">
-Enter Details
-</a>
-
+<div class="icon">🏡</div>
+<h3>Vastu</h3>
+<p>ವಾಸ್ತು ಸಲಹೆ</p>
+<p>Guidance for home and property related Vastu consultation.</p>
 </div>
 
-
-<div class="card">
-
-<div class="icon">🏠</div>
-
-<h3>
-Vastu Consultation
-</h3>
-
-<p>
-Guidance for homes and business spaces.
-</p>
-
-<a class="viewbtn" href="#contact">
-Contact Us
-</a>
-
 </div>
-
-
-<div class="card">
-
-<div class="icon">⭐</div>
-
-<h3>
-Personal Consultation
-</h3>
-
-<p>
-Personalized consultation according to your requirements.
-</p>
-
-<a class="viewbtn" href="#contact">
-Contact Us
-</a>
-
-</div>
-
 </div>
 </section>
 
 
-<section class="match" id="match">
-
-<div class="match-inner">
-
-<div class="gold" style="text-align:center;">
-Marriage Match Making
-</div>
-
-<h2 style="text-align:center;">
-ವರ–ವಧು ಜಾತಕ ಹೊಂದಾಣಿಕೆ
-</h2>
-
-<p class="intro">
-ವಧು ಮತ್ತು ವರರ ನಕ್ಷತ್ರ, ರಾಶಿ, ಜನ್ಮ ದಿನಾಂಕ ಮತ್ತು ಜನ್ಮ ಸ್ಥಳದ ವಿವರಗಳು ಅಗತ್ಯವಿರುತ್ತದೆ.
-</p>
-
-<div class="matchbox">
-
-
-<div class="personbox">
-
-<h3>
-👰 ವಧುವಿನ ವಿವರಗಳು
-</h3>
-
-<div class="field">
-<label>ವಧುವಿನ ಹೆಸರು</label>
-<input type="text" id="brideName" placeholder="ಹೆಸರು">
-</div>
-
-<div class="field">
-<label>ವಧುವಿನ ನಕ್ಷತ್ರ</label>
-<input type="text" id="brideNakshatra" placeholder="ನಕ್ಷತ್ರ">
-</div>
-
-<div class="field">
-<label>ವಧುವಿನ ರಾಶಿ</label>
-<input type="text" id="brideRashi" placeholder="ರಾಶಿ">
-</div>
-
-<div class="field">
-<label>ವಧುವಿನ Date of Birth</label>
-<input type="date" id="brideDob">
-</div>
-
-<div class="field">
-<label>ವಧುವಿನ Birth Place</label>
-<input type="text" id="bridePlace" placeholder="ಜನ್ಮ ಸ್ಥಳ">
-</div>
-
-</div>
-
-
-<div class="personbox">
-
-<h3>
-🤵 ವರನ ವಿವರಗಳು
-</h3>
-
-<div class="field">
-<label>ವರನ ಹೆಸರು</label>
-<input type="text" id="groomName" placeholder="ಹೆಸರು">
-</div>
-
-<div class="field">
-<label>ವರನ ನಕ್ಷತ್ರ</label>
-<input type="text" id="groomNakshatra" placeholder="ನಕ್ಷತ್ರ">
-</div>
-
-<div class="field">
-<label>ವರನ ರಾಶಿ</label>
-<input type="text" id="groomRashi" placeholder="ರಾಶಿ">
-</div>
-
-<div class="field">
-<label>ವರನ Date of Birth</label>
-<input type="date" id="groomDob">
-</div>
-
-<div class="field">
-<label>ವರನ Birth Place</label>
-<input type="text" id="groomPlace" placeholder="ಜನ್ಮ ಸ್ಥಳ">
-</div>
-
-</div>
-
-</div>
-
-
-<div class="match-submit">
-
-<button class="btn whatsapp" onclick="sendMatchWhatsApp()">
-💬 WhatsAppಗೆ ವಿವರಗಳನ್ನು ಕಳುಹಿಸಿ
-</button>
-
-</div>
-
-<p class="matchnote">
-ಎಲ್ಲಾ ವಿವರಗಳನ್ನು ತುಂಬಿದ ನಂತರ WhatsApp button ಒತ್ತಿ.
-</p>
-
-</div>
-</section>
-
-
-<section class="about" id="about">
-
-<div class="about-inner">
-
-<div class="about-photo">
-
-<img src="profile.jpg" alt="Preetham P Balyaya">
-
-<div class="photo-name">
-Preetham P Balyaya
-</div>
-
-</div>
-
-
-<div class="about-text">
-
-<div class="gold">
-About Sri Durga Jyothishyalaya
-</div>
-
-<h2>
-Sri Durga Jyothishyalaya
-</h2>
-
-<p>
-Traditional Jyothishya consultation presented with clear, respectful and practical guidance.
-</p>
-
-<p>
-Consultations are available for clients in Karnataka, across India and worldwide through online sessions.
-</p>
-
-<p>
-<b>Languages:</b> Kannada & English
-</p>
-
-</div>
-
-</div>
-</section>
-
-
+<!-- RATES -->
 <section class="rates" id="rates">
 
-<div class="rates-inner">
+<div class="container">
 
-<div class="gold" style="text-align:center;">
-Consultation Services
+<div class="section-title">
+<h2>Our Rates</h2>
+<p>ಸೇವೆಗಳ ದರ</p>
 </div>
 
-<h2 style="text-align:center;">
-Our Services
-</h2>
+<div class="price-grid">
 
-<p class="intro">
-Rates are shown only when you select “View Details”.
+<div class="price-card">
+<h3>Jathaka Koota</h3>
+<p>ಜಾತಕ ಕೂಟ</p>
+<div class="price">₹500</div>
+<p>India</p>
+</div>
+
+<div class="price-card">
+<h3>Horoscope Preparation</h3>
+<p>ಜಾತಕ ತಯಾರಿ</p>
+<div class="price">₹1,100</div>
+<p>India</p>
+</div>
+
+<div class="price-card">
+<h3>Marriage Match Making</h3>
+<p>ವಿವಾಹ ಹೊಂದಾಣಿಕೆ</p>
+<div class="price">₹1,100</div>
+<p>India</p>
+</div>
+
+<div class="price-card">
+<h3>Vastu Consultation</h3>
+<p>ವಾಸ್ತು ಸಲಹೆ</p>
+<div class="price">Contact</div>
+<p>For consultation fee</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONSULTATION FORM -->
+<section class="consult" id="consultation">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Book Your Consultation</h2>
+<p>ನಿಮ್ಮ ವಿವರಗಳನ್ನು ನಮೂದಿಸಿ</p>
+</div>
+
+<div class="form-box">
+
+<form onsubmit="sendWhatsApp(event)">
+
+<div class="form-group">
+<label>Name / ಹೆಸರು</label>
+<input type="text" id="name" required>
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Birth Date / ಹುಟ್ಟಿದ ದಿನಾಂಕ</label>
+<input type="date" id="birthdate" required>
+</div>
+
+<div class="form-group">
+<label>Birth Time / ಹುಟ್ಟಿದ ಸಮಯ</label>
+<input type="time" id="birthtime" required>
+</div>
+
+</div>
+
+<div class="form-group">
+<label>Birth Place / ಹುಟ್ಟಿದ ಸ್ಥಳ</label>
+<input type="text" id="birthplace"
+placeholder="Village / Town / City" required>
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Gender / ಲಿಂಗ</label>
+<select id="gender" required>
+<option value="">Select / ಆಯ್ಕೆ ಮಾಡಿ</option>
+<option>Male / ಪುರುಷ</option>
+<option>Female / ಮಹಿಳೆ</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Service / ಸೇವೆ</label>
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Horoscope Preparation</option>
+<option>Jathaka Koota</option>
+<option>Marriage Match Making</option>
+<option>Vastu Consultation</option>
+</select>
+</div>
+
+</div>
+
+<div class="form-group">
+<label>Mobile / WhatsApp Number</label>
+<input type="tel" id="mobile" required>
+</div>
+
+<div class="form-group">
+<label>Message / ಹೆಚ್ಚುವರಿ ಮಾಹಿತಿ</label>
+<textarea id="message"
+placeholder="Write your requirement..."></textarea>
+</div>
+
+<button type="submit" class="submit-btn">
+Send Details on WhatsApp
+</button>
+
+</form>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Sri Durga Jyothishyalaya</h2>
+<p>ಶ್ರೀ ದುರ್ಗಾ ಜ್ಯೋತಿಷ್ಯಾಲಯ</p>
+</div>
+
+<div class="about">
+
+<div class="about-box">
+
+<h3>Traditional Guidance</h3>
+
+<p>
+Sri Durga Jyothishyalaya provides consultation for
+<strong>Horoscope Preparation, Jathaka Koota,
+Marriage Match Making and Vastu.</strong>
 </p>
 
-<div class="rategrid">
-
-
-<div class="rate">
-
-<strong>
-Horoscope Preparation
-</strong>
-
 <br>
 
-<button class="viewbtn" onclick="showRate(this)">
-View Details
-</button>
-
-<span>
-₹1,100
-</span>
+<p>
+We provide online consultation for clients in
+<span class="highlight">India and USA.</span>
+</p>
 
 </div>
 
+<div class="about-box">
 
-<div class="rate">
+<h3>Birth Details Matter</h3>
 
-<strong>
-Jathaka Koota
-</strong>
-
-<br>
-
-<button class="viewbtn" onclick="showRate(this)">
-View Details
-</button>
-
-<span>
-₹500
-</span>
-
-</div>
-
-
-<div class="rate">
-
-<strong>
-Marriage Match Making
-</strong>
+<p>
+For horoscope and marriage matching,
+please provide accurate:
+</p>
 
 <br>
 
-<button class="viewbtn" onclick="showRate(this)">
-View Details
-</button>
-
-<span>
-Contact us for consultation details.
-</span>
-
-</div>
-
-
-<div class="rate">
-
-<strong>
-Vastu Consultation
-</strong>
+<p>
+<strong>Birth Date</strong><br>
+<strong>Birth Time</strong><br>
+<strong>Birth Place</strong>
+</p>
 
 <br>
 
-<button class="viewbtn" onclick="showRate(this)">
-View Details
-</button>
-
-<span>
-Contact us for consultation details.
-</span>
+<p>
+Accurate birth details help in preparing the requested
+horoscope information.
+</p>
 
 </div>
 
@@ -910,211 +761,185 @@ Contact us for consultation details.
 </section>
 
 
-<section class="location" id="location">
+<!-- FAQ -->
+<section>
 
-<div class="gold">
-Our Location
+<div class="container">
+
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+<p>ಸಾಮಾನ್ಯ ಪ್ರಶ್ನೆಗಳು</p>
 </div>
 
-<h2>
-ನಮ್ಮ ಸ್ಥಳ / Our Location
-</h2>
+<div class="faq">
 
-<p class="intro">
-Salethur, Karnataka, India
+<details>
+<summary>What details are required for a horoscope?</summary>
+<p>Name, Birth Date, Birth Time and Birth Place are required.</p>
+</details>
+
+<details>
+<summary>What is Marriage Match Making?</summary>
+<p>
+Marriage Match Making means comparing the birth details
+of two people for horoscope compatibility consultation.
 </p>
+</details>
 
-<img src="building.jpg" alt="Sri Durga Jyothishyalaya">
+<details>
+<summary>Can I consult from USA?</summary>
+<p>
+Yes. Online consultation is available for clients in India and USA.
+</p>
+</details>
 
+<details>
+<summary>What if I don't know my exact birth time?</summary>
+<p>
+Please contact us and discuss your requirement before submitting
+the consultation request.
+</p>
+</details>
+
+</div>
+</div>
 </section>
 
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
 
-<h2>
-Connect With Us
-</h2>
+<div class="container">
 
-<p>
-Personalized consultation for clients in India and worldwide.
-</p>
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>ಸಂಪರ್ಕಿಸಿ</p>
+</div>
 
-<p>
-📞 <a href="tel:+919481957909">9481957909</a>
-</p>
+<div class="contact-grid">
 
-<p>
-📞 <a href="tel:+918105720362">8105720362</a>
-</p>
-
-<a class="btn whatsapp"
-href="https://wa.me/919481957909"
-target="_blank">
-💬 WhatsApp
+<div class="contact-card">
+<h3>📱 WhatsApp</h3>
+<p>Online Consultation</p>
+<a href="https://wa.me/919481957909">
+Chat on WhatsApp
 </a>
+</div>
 
-<a class="btn whatsapp"
-href="https://wa.me/918105720362"
-target="_blank">
-💬 WhatsApp 2
-</a>
+<div class="contact-card">
+<h3>🇮🇳 India</h3>
+<p>Online Horoscope & Consultation</p>
+<p>Available by appointment</p>
+</div>
 
-<br>
+<div class="contact-card">
+<h3>🇺🇸 USA</h3>
+<p>Online Consultation</p>
+<p>Available by appointment</p>
+</div>
 
-<a class="btn maps"
-href="https://maps.app.goo.gl/tTLu3uvup9raPzBy7"
-target="_blank">
-📍 Google Maps
-</a>
-
+</div>
+</div>
 </section>
 
 
 <footer>
 
-<strong>
-Sri Durga Jyothishyalaya
-</strong>
-
 <p>
-Horoscope • Marriage Matching • Vastu
+© 2026 <strong>Sri Durga Jyothishyalaya</strong>
 </p>
 
-<p class="small">
-© 2026 Sri Durga Jyothishyalaya. All rights reserved.
+<p>
+Horoscope Preparation • Jathaka Koota • Marriage Match Making • Vastu
 </p>
 
 </footer>
 
 
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="whatsapp"
+href="https://wa.me/918105720361"
+target="_blank"
+aria-label="WhatsApp">
+☏
+</a>
+
+
 <script>
 
-function showKannada(){
+function sendWhatsApp(event){
 
-document.getElementById("titleKn").style.display="block";
-document.getElementById("titleEn").style.display="none";
+    event.preventDefault();
 
-document.getElementById("subtitleKn").style.display="block";
-document.getElementById("subtitleEn").style.display="none";
+    const name =
+        document.getElementById("name").value;
 
-document.getElementById("contactKn").style.display="inline-block";
-document.getElementById("contactEn").style.display="none";
+    const birthdate =
+        document.getElementById("birthdate").value;
 
+    const birthtime =
+        document.getElementById("birthtime").value;
+
+    const birthplace =
+        document.getElementById("birthplace").value;
+
+    const gender =
+        document.getElementById("gender").value;
+
+    const service =
+        document.getElementById("service").value;
+
+    const mobile =
+        document.getElementById("mobile").value;
+
+    const message =
+        document.getElementById("message").value;
+
+    const whatsappNumber = "919481957909";
+
+    const text =
+`*Sri Durga Jyothishyalaya - Consultation Request*
+
+Name: ${name}
+Birth Date: ${birthdate}
+Birth Time: ${birthtime}
+Birth Place: ${birthplace}
+Gender: ${gender}
+Service: ${service}
+Mobile: ${mobile}
+
+Message:
+${message}`;
+
+    const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(text);
+
+    window.open(url, "_blank");
 }
 
 
-function showEnglish(){
+function toggleLanguage(){
 
-document.getElementById("titleKn").style.display="none";
-document.getElementById("titleEn").style.display="block";
+    const current =
+        document.documentElement.lang;
 
-document.getElementById("subtitleKn").style.display="none";
-document.getElementById("subtitleEn").style.display="block";
+    if(current === "en"){
+        document.documentElement.lang = "kn";
 
-document.getElementById("contactKn").style.display="none";
-document.getElementById("contactEn").style.display="inline-block";
+        alert(
+        "Kannada version will be added here."
+        );
 
-}
+    }else{
+        document.documentElement.lang = "en";
 
-
-function showDetails(button){
-
-let details=button.nextElementSibling;
-
-if(details.style.display==="block"){
-
-details.style.display="none";
-button.innerText="View Details";
-
-}else{
-
-details.style.display="block";
-button.innerText="Hide Details";
-
-}
-
-}
-
-
-function showRate(button){
-
-let rate=button.nextElementSibling;
-
-if(rate.style.display==="block"){
-
-rate.style.display="none";
-button.innerText="View Details";
-
-}else{
-
-rate.style.display="block";
-button.innerText="Hide Details";
-
-}
-
-}
-
-
-function sendMatchWhatsApp(){
-
-let brideName=document.getElementById("brideName").value.trim();
-let brideNakshatra=document.getElementById("brideNakshatra").value.trim();
-let brideRashi=document.getElementById("brideRashi").value.trim();
-let brideDob=document.getElementById("brideDob").value;
-let bridePlace=document.getElementById("bridePlace").value.trim();
-
-let groomName=document.getElementById("groomName").value.trim();
-let groomNakshatra=document.getElementById("groomNakshatra").value.trim();
-let groomRashi=document.getElementById("groomRashi").value.trim();
-let groomDob=document.getElementById("groomDob").value;
-let groomPlace=document.getElementById("groomPlace").value.trim();
-
-
-if(
-!brideName ||
-!brideNakshatra ||
-!brideRashi ||
-!brideDob ||
-!bridePlace ||
-!groomName ||
-!groomNakshatra ||
-!groomRashi ||
-!groomDob ||
-!groomPlace
-){
-
-alert("ದಯವಿಟ್ಟು ವರ ಮತ್ತು ವಧುವಿನ ಎಲ್ಲಾ ವಿವರಗಳನ್ನು ತುಂಬಿ.");
-return;
-
-}
-
-
-let message=
-"🌸 Sri Durga Jyothishyalaya\n\n"+
-"💍 Marriage Match Making Details\n\n"+
-
-"👰 ವಧುವಿನ ವಿವರಗಳು\n"+
-"ಹೆಸರು: "+brideName+"\n"+
-"ನಕ್ಷತ್ರ: "+brideNakshatra+"\n"+
-"ರಾಶಿ: "+brideRashi+"\n"+
-"Date of Birth: "+brideDob+"\n"+
-"Birth Place: "+bridePlace+"\n\n"+
-
-"🤵 ವರನ ವಿವರಗಳು\n"+
-"ಹೆಸರು: "+groomName+"\n"+
-"ನಕ್ಷತ್ರ: "+groomNakshatra+"\n"+
-"ರಾಶಿ: "+groomRashi+"\n"+
-"Date of Birth: "+groomDob+"\n"+
-"Birth Place: "+groomPlace+"\n\n"+
-
-"Please check the marriage matching details.";
-
-
-window.open(
-"https://wa.me/919481957909?text="+encodeURIComponent(message),
-"_blank"
-);
-
+        alert(
+        "English version selected."
+        );
+    }
 }
 
 </script>
