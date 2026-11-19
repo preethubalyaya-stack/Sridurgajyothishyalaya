@@ -5,12 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#071426">
 <title>Sri Durga Jyothishyalaya | Preetham P Balyaya</title>
-<meta name="description" content="Horoscope Preparation, Jathaka Koota, Marriage Match Making and Vastu Consultation in India and USA.">
+<meta name="description" content="Sri Durga Jyothishyalaya by Preetham P Balyaya offers horoscope preparation, Jathaka Koota, marriage matching, Vastu and online astrology consultation in India and the USA.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Preetham P Balyaya">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sri Durga Jyothishyalaya | Astrology Consultation">
+<meta property="og:description" content="Horoscope preparation, Jathaka Koota, marriage matching and online consultation.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sri Durga Jyothishyalaya">
+<meta name="twitter:description" content="Astrology consultation by Preetham P Balyaya.">
 <style>
 :root{--bg:#071426;--bg2:#0d2039;--gold:#d8b568;--gold-light:#f4dfaa;--cream:#f7f3e9;--white:#fff;--text:#e9edf4;--muted:#aab5c5;--ink:#172338;--line:rgba(216,181,104,.28);--shadow:0 20px 60px rgba(0,0,0,.18)}
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
 body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--ink);line-height:1.65}
 a{text-decoration:none;color:inherit}
+:focus-visible{outline:3px solid #c99f4b;outline-offset:3px}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
 .topbar{background:#040c17;color:var(--muted);font:12px Arial,sans-serif;padding:8px 0;border-bottom:1px solid var(--line)}
 .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
@@ -103,7 +114,7 @@ footer strong{color:var(--gold-light)}footer p+p{font:12px Arial,sans-serif;marg
 .mercury{width:9px;height:9px;background:#b8b4ad}.venus{width:13px;height:13px;background:#e6b66c}.earth{width:15px;height:15px;background:radial-gradient(circle at 30% 30%,#9de8ff,#1764cc 55%,#17432b)}.mars{width:12px;height:12px;background:#d95d39}.jupiter{width:23px;height:23px;background:linear-gradient(#e8c39b 25%,#9c694b 40%,#e9d2aa 55%,#a66e4d 70%)}.saturn{width:19px;height:19px;background:#d8bd82}.saturn:after{content:"";position:absolute;width:34px;height:10px;border:3px solid #e5d09b;border-radius:50%;top:4px;left:-9px;transform:rotate(-20deg)}.uranus{width:16px;height:16px;background:#8bd9dc}.neptune{width:15px;height:15px;background:#315eea}
 
 /* TREE-BRANCHING LIGHTNING */
-.lightning-layer{position:fixed;inset:0;z-index:8;pointer-events:none;overflow:hidden;mix-blend-mode:screen;opacity:1}
+.lightning-layer{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;mix-blend-mode:screen;opacity:1}
 .lightning-flash{position:absolute;inset:0;opacity:0;background:radial-gradient(ellipse at 50% 18%,rgba(220,237,255,.34),transparent 65%);animation:skyFlash 7s infinite}
 .real-bolt{position:absolute;top:-4%;height:85vh;width:clamp(100px,18vw,220px);opacity:0;overflow:visible;animation:lightningStrike 7s infinite;filter:drop-shadow(0 0 8px #fff) drop-shadow(0 0 20px #80baff) drop-shadow(0 0 32px #e7c56e)}
 .bolt-a{left:3%;animation-delay:.2s}.bolt-b{left:42%;height:95vh;animation-delay:2.5s}.bolt-c{right:2%;animation-delay:4.8s}
@@ -116,6 +127,29 @@ footer strong{color:var(--gold-light)}footer p+p{font:12px Arial,sans-serif;marg
 @media(max-width:440px){.services{grid-template-columns:1fr}.hero h1{font-size:40px}.hero p{font-size:15px}.hero-note{gap:12px}.lang{padding:8px 11px}}
 @media(prefers-reduced-motion:reduce){.orbit,.real-bolt,.lightning-flash,.hero-content:after{animation:none!important}.real-bolt{opacity:.25}}
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Sri Durga Jyothishyalaya",
+  "description": "Horoscope preparation, Jathaka Koota, marriage matching, Vastu consultation and online astrology consultation.",
+  "telephone": "+91-8105720361",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Palthaje, Salethur, Natekal",
+    "addressRegion": "Karnataka",
+    "postalCode": "574323",
+    "addressCountry": "IN"
+  },
+  "areaServed": ["India", "United States"],
+  "founder": {
+    "@type": "Person",
+    "name": "Preetham P Balyaya"
+  }
+}
+</script>
+
 </head>
 <body>
 
@@ -167,14 +201,4 @@ footer strong{color:var(--gold-light)}footer p+p{font:12px Arial,sans-serif;marg
 <div class="service"><div class="ico">🌙</div><h3>Jathaka Koota</h3><p>Horoscope compatibility and traditional matching.</p><div class="price">₹500</div><button class="details" onclick="showService('Jathaka Koota','₹500')">VIEW DETAILS →</button></div>
 <div class="service"><div class="ico">💍</div><h3>Marriage Match Making</h3><p>Marriage horoscope matching and consultation.</p><div class="price">₹1,100</div><button class="details" onclick="showService('Marriage Match Making','₹1,100')">VIEW DETAILS →</button></div>
 <div class="service"><div class="ico">🏠</div><h3>Vastu Consultation</h3><p>Consultation regarding house and property Vastu.</p><div class="price">Contact</div><button class="details" onclick="showService('Vastu Consultation','Contact for price')">VIEW DETAILS →</button></div>
-<div class="service"><div class="ico">🔱</div><h3>Personal Consultation</h3><p>Personal astrology consultation for your questions.</p><div class="price">Contact</div><button class="details" onclick="showService('Personal Consultation','Contact for price')">VIEW DETAILS →</button></div>
-<div class="service"><div class="ico">🪐</div><h3>Graha Shanthi</h3><p>Traditional guidance regarding Graha Shanthi.</p><div class="price">Contact</div><button class="details" onclick="showService('Graha Shanthi','Contact for price')">VIEW DETAILS →</button></div>
-<div class="service"><div class="ico">✨</div><h3>Astrology Guidance</h3><p>Astrology-based guidance for personal matters.</p><div class="price">Contact</div><button class="details" onclick="showService('Astrology Guidance','Contact for price')">VIEW DETAILS →</button></div>
-<div class="service"><div class="ico">🌟</div><h3>Online Consultation</h3><p>Consultation for customers in India and abroad.</p><div class="price">Contact</div><button class="details" onclick="showService('Online Consultation','Contact for price')">VIEW DETAILS →</button></div>
-</div></div></section>
-
-<section class="about" id="about"><div class="wrap about-grid">
-<div class="profile-frame"><img src="profile.jpg" alt="Preetham P Balyaya"></div>
-<div class="about-copy"><span class="overline">About Us</span><h2>Welcome to Sri Durga Jyothishyalaya</h2>
-<p>Sri Durga Jyothishyalaya offers astrology services with personal attention and consultation.</p>
-<p>Our services include horoscope pr
+<div class="service"><div class="ico">🔱</div><h3>Personal Consultation</h3><p>Personal astrology consultatio
